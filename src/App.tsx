@@ -4,8 +4,8 @@ import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
-    <div className="App">
-      Helicarrier Task
+    <div className="container">
+      Helicarrier Simple Transaction Task
       <SearchBar/>
     </div>
   );
