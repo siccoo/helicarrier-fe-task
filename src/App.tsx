@@ -1,5 +1,5 @@
 
-import './App.css';
+import './styles/App.css';
 import SearchBar from "./components/SearchBar";
 import { Filters } from './containers/Filters';
 
