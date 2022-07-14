@@ -10,7 +10,7 @@ export default function CustomizedInputBase() {
     return (
         <Paper
             component="form"
-            sx={{p: '2px 4px', display: 'flex', alignItems: 'center', width: 600, height: 'fit-content', marginTop: 200 }}
+            sx={{p: '2px 4px', display: 'flex', alignItems: 'center', width: 600, height: 'fit-content', marginTop: 50 }}
         >
             <InputBase
                 sx={{ ml: 1, flex: 1 }}

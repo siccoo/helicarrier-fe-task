@@ -21,7 +21,7 @@ function App() {
           backgroundColor: purple[200],
           borderRadius: 1,
           width: '100%',
-          height: '400px',
+          height: '600px',
           margin: 'auto'
         }}
       >
