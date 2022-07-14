@@ -10,12 +10,12 @@ export const RangeSlider = () => {
   };
 
   return (
-    <Box sx={{ width: 300 }}>
+    <Box sx={{ width: 300, paddingTop: '30px' }}>
         <Slider  
         getAriaLabel={() => 'slider'}
         value={value} 
         onChange={handleChange} 
-        valueLabelDisplay="auto"
+        valueLabelDisplay="on"
         />
     </Box>
   );
