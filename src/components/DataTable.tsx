@@ -9,8 +9,8 @@ interface DataTableProps {
 
 export const DataTable: React.FC<DataTableProps> = ({ columns, data }) => {
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="table">
+        <TableContainer>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         {
@@ -24,7 +24,7 @@ export const DataTable: React.FC<DataTableProps> = ({ columns, data }) => {
                 </TableHead>
                 <TableBody>
                     {
-                        data.map((row: Transaction) => {
+                        data.map((row: Transaction) => (
                             <TableRow
                                 key={row.transaction_name}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -34,7 +34,7 @@ export const DataTable: React.FC<DataTableProps> = ({ columns, data }) => {
                                 <TableCell align="right">{row.category}</TableCell>
                                 <TableCell align="right">{row.transaction_vendor}</TableCell>
                             </TableRow>
-                        })
+                        ))
                     }
                 </TableBody>
             </Table>

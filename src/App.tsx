@@ -36,10 +36,10 @@ function App() {
         }}
       >
         Helicarrier Transaction Task
-        <SearchBar  />
+        <SearchBar />
         <Filters />
       </Box>
-
+      <DataTable columns={COLUMNS} data={transactions} />
     </div>
   );
 }
