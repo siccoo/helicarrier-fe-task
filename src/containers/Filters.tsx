@@ -1,6 +1,7 @@
 import Box, { BoxProps } from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import MultiSelectChip from '../components/MultiSelect';
+import { RangeSlider } from '../components/RangeSlider';
 
 export const Filters = () => {
 return(
@@ -15,7 +16,8 @@ return(
     }}
     >
         <MultiSelectChip />
-        <Button disabled></Button>
+        <RangeSlider />
+        <Button disabled>Clear All</Button>
 
     </Box>
 )

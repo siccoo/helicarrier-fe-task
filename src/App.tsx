@@ -8,8 +8,8 @@ import { purple } from '@mui/material/colors';
 
 function App() {
   return (
-    <div className="container">
-      Helicarrier Simple Transaction Task
+    <div>
+      {/* Helicarrier Simple Transaction Task */}
       <Box
         sx={{
           display: 'flex',
@@ -18,15 +18,15 @@ function App() {
           justifyContent: 'center',
           p: 1,
           m: 1,
-          bgColor: purple[500],
+          backgroundColor: purple[200],
           borderRadius: 1,
-          width: '70%',
+          width: '100%',
           height: '400px',
           margin: 'auto'
         }}
       >
-        {/* Helicarrier Simple Transaction Task */}
-        <SearchBar />
+        Helicarrier Simple Transaction Task
+        <SearchBar  />
         <Filters />
       </Box>
 
