@@ -3,6 +3,7 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import TextField from "@mui/material/TextField";
 import { Autocomplete, Checkbox } from "@mui/material";
 import * as React from "react";
+import { Key } from "@mui/icons-material";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />
 const checkedIcon = <CheckBoxIcon fontSize="small" />
@@ -15,7 +16,7 @@ interface Option {
     title: string
 }
 
-export const AutoCompleteCheckboxes = () => {
+export const AutoCompleteCheckboxes: React.FC<AutoCompleteProps> = ({ options }) => {
     return (
         <Autocomplete
             multiple
@@ -24,17 +25,17 @@ export const AutoCompleteCheckboxes = () => {
             disableCloseOnSelect
             getOptionLabel={(option) => option.title}
             renderOption={(props, option, { selected }) => (
-                <li {...props}>
-                    <Checkbox 
-                    icon={icon}
-                    checkedIcon={checkedIcon}
-                    style={{ marginRight: 8 }}
-                    checked={selected}
+                <li {...props} key={key}>
+                    <Checkbox
+                        icon={icon}
+                        checkedIcon={checkedIcon}
+                        style={{ marginRight: 8 }}
+                        checked={selected}
                     />
                     {option.title}
                 </li>
             )}
-            style={{width: 500}}
+            style={{ width: 500 }}
             renderInput={(params) => (
                 <TextField {...params} label="Checkboxes" placeholder="Search Options"
             )}

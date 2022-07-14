@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import MultiSelectChip from '../components/MultiSelect';
 import { RangeSlider } from '../components/RangeSlider';
 import { DropdownWrapper } from '../components/DropdownWrapper';
+import { AutoCompleteCheckboxes } from '../components/AutoCompleteCheckboxes';
 import "../styles/filters.css"
 
 export const Filters = () => {
