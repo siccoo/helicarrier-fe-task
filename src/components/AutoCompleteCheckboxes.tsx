@@ -3,6 +3,7 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import TextField from "@mui/material/TextField";
 import { Autocomplete, Checkbox } from "@mui/material";
+import { padding } from "@mui/system";
 
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />
@@ -36,7 +37,7 @@ export const AutoCompleteCheckboxes: React.FC<AutoCompleteProps> = ({ options })
                     {option}
                 </li>
             )}
-            style={{ width: 150, margin: '8px' }}
+            style={{ width: 150, marginTop: '-70px', padding: "5px"}}
             renderInput={(params) => (
                 <TextField {...params} label="Checkboxes" placeholder="Search Options" />
             )}

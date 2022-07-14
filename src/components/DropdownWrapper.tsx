@@ -73,7 +73,8 @@ export const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ title, childre
                     color: "rgba(0,0,0,0.87)",
                     textTransform: "none",
                     fontWeight: 400,
-                    padding: '14.5px'
+                    padding: '14.5px',
+                    margin: '8px'
 
                 }}
             >
