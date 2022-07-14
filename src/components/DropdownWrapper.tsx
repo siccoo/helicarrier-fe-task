@@ -43,11 +43,12 @@ const StyledMenu = styled((props: MenuProps) => (
 }))
 
 interface DropdownWrapperProps {
-    title: string
+    title: string,
+    children: JSX.Element[] | JSX.Element
 }
 
-export const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ title }) => {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+export const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ title, children }) => {
+    const [anchorEl, setAnchorEl] = useState<any>(null);
     const open = Boolean(anchorEl);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -65,6 +66,7 @@ export const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ title }) => {
                 aria-haspopup='true'
                 variant='outlined'
                 disableElevation
+                onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
                 style={{
                     borderColor: "rgba(0, 0, 0, 0.23)",
@@ -85,7 +87,7 @@ export const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ title }) => {
                 open={open}
                 onClose={handleClose}
             >
-                <Box>Menu will be inserted here</Box>
+                <Box>{children}</Box>
             </StyledMenu>
         </div>
     )

@@ -19,10 +19,12 @@ export const Filters = () => {
         >
             <div className='filtersContainer'>
                 <MultiSelectChip />
-                <DropdownWrapper title='Dropdown Menu' />
+                <DropdownWrapper 
+                title='dropdown-menu'
+                ><RangeSlider /></DropdownWrapper>
             </div>
 
-            <RangeSlider />
+            
             <Button disabled>Clear All</Button>
 
         </Box>

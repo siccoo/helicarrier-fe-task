@@ -25,7 +25,7 @@ function App() {
           margin: 'auto'
         }}
       >
-        Helicarrier Simple Transaction Task
+        Helicarrier Transaction Task
         <SearchBar  />
         <Filters />
       </Box>
