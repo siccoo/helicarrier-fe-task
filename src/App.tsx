@@ -9,7 +9,26 @@ import Box, { BoxProps } from '@mui/material/Box';
 import { purple } from '@mui/material/colors';
 import { AutoCompleteCheckboxes } from './components/AutoCompleteCheckboxes';
 
+import { useQuery, gql } from '@apollo/client';
+
+
+// const GET_TRANSACTION = gql`
+//   query GetTransaction {
+//     transactions {
+//       id
+//       transaction_name
+//       amount
+//       category
+//     }
+//   }
+// `;
+
 function App() {
+  // const { loading, error, data } = useQuery(GET_TRANSACTION);
+
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error :(</p>;
+
   const COLUMNS = [
     "Transaction Name",
     "Amount",
