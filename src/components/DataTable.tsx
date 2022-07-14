@@ -39,5 +39,5 @@ export const DataTable: React.FC<DataTableProps> = ({ columns, data }) => {
                 </TableBody>
             </Table>
         </TableContainer>
-    )
+    );
 }

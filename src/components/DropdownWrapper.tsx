@@ -48,7 +48,7 @@ interface DropdownWrapperProps {
 }
 
 export const DropdownWrapper: React.FC<DropdownWrapperProps> = ({ title, children }) => {
-    const [anchorEl, setAnchorEl] = useState<any>(null);
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
