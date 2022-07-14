@@ -118,3 +118,9 @@
     flex-direction: column;
   }
 }
+
+.searchHeader {
+  color: #ffffff;
+  margin-bottom: -350px;
+  font-size: 36px;
+}

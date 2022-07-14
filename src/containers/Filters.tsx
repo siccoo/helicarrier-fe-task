@@ -32,7 +32,7 @@ export const Filters = ({
                     list={categories}
                 />
                 <DropdownWrapper
-                    title='dropdown-menu'
+                    title='Price'
                 ><RangeSlider /></DropdownWrapper>
             </div>
 

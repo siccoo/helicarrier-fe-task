@@ -39,7 +39,7 @@ function App() {
           margin: 'auto'
         }}
       >
-        Helicarrier Transaction Task
+        <h1 className='searchHeader'>Helicarrier Transaction Task</h1>
         <SearchBar />
         <Filters
           categories={categories}
