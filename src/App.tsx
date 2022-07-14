@@ -11,25 +11,25 @@ function App() {
     <div className="container">
       Helicarrier Simple Transaction Task
       <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        p: 1,
-        m: 1,
-        bgColor: purple[500],
-        borderRadius: 1,
-        width: '70%',
-        height: '400px',
-        margin: 'auto'
-      }}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          p: 1,
+          m: 1,
+          bgColor: purple[500],
+          borderRadius: 1,
+          width: '70%',
+          height: '400px',
+          margin: 'auto'
+        }}
       >
-      {/* Helicarrier Simple Transaction Task */}
-      <SearchBar/>
-      <Filters />
+        {/* Helicarrier Simple Transaction Task */}
+        <SearchBar />
+        <Filters />
       </Box>
-      
+
     </div>
   );
 }

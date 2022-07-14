@@ -1,4 +1,4 @@
-import { Box, Chip, FormControl, InputLabel, MenuItem, OutlinedInput, Select } from '@mui/material';
+import { Box, Chip, FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent } from '@mui/material';
 import * as React from 'react';
 
 const names = [
@@ -9,7 +9,15 @@ const names = [
 ]
 
 export default function MultiSelectChip() {
-    const [filterName, setFilterName] = React.useState<string[]>([])
+    const [filterName, setFilterName] = React.useState<string[]>([]);
+
+    const handleChange = (event: SelectChangeEvent<typeof filterName>) => {
+        const { target: { value } } = event;
+        setFilterName(
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    }
+
     return (
         <FormControl sx={{ m: 1, width: 100 }}>
             <InputLabel id="demo-label">Multi Select</InputLabel>
@@ -18,6 +26,7 @@ export default function MultiSelectChip() {
                 id='demo-multi-select'
                 multiple
                 value={filterName}
+                onChange={handleChange}
                 input={<OutlinedInput id='select-multiple' label="chip" />}
                 renderValue={(selected) => (
                     <Box
