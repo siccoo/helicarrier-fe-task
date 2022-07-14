@@ -12,14 +12,12 @@ const MenuProps = {
     },
 };
 
-const names = [
-    'Filter Option 1',
-    'Filter Option 2',
-    'Filter Option 3',
-    'Filter Option 4'
-]
+interface MultiSelectChipProps {
+    title: string,
+    list: Array<string>
+}
 
-export default function MultiSelectChip() {
+export const MultiSelectChip: React.FC<MultiSelectChipProps> = ({title, list}) => {
     const [filterName, setFilterName] = useState<string[]>([]);
 
     const handleChange = (event: SelectChangeEvent<typeof filterName>) => {
@@ -31,7 +29,7 @@ export default function MultiSelectChip() {
 
     return (
         <FormControl sx={{ m: 1, width: 100 }}>
-            <InputLabel id="demo-label">Multi Select</InputLabel>
+            <InputLabel id="demo-label">{title}</InputLabel>
             <Select
                 labelId='demo-label'
                 id='demo-multi-select'
@@ -51,7 +49,7 @@ export default function MultiSelectChip() {
                 )}
                 MenuProps={MenuProps}
             >
-                {names.map((name) => (
+                {list.map((name) => (
                     <MenuItem
                         key={name}
                         value={name}

@@ -1,12 +1,20 @@
 import Box, { BoxProps } from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import MultiSelectChip from '../components/MultiSelect';
+import { MultiSelectChip } from '../components/MultiSelect';
 import { RangeSlider } from '../components/RangeSlider';
 import { DropdownWrapper } from '../components/DropdownWrapper';
 import { AutoCompleteCheckboxes } from '../components/AutoCompleteCheckboxes';
 import "../styles/filters.css"
 
-export const Filters = () => {
+export const Filters = ({
+    categories,
+    names,
+    amountRange
+}: {
+    categories: Array<string>,
+    names: Array<string>,
+    amountRange: Array<number>,
+}) => {
     return (
         <Box
             sx={{
@@ -19,13 +27,16 @@ export const Filters = () => {
             }}
         >
             <div className='filtersContainer'>
-                <MultiSelectChip />
-                <DropdownWrapper 
-                title='dropdown-menu'
+                <MultiSelectChip
+                    title='Categories'
+                    list={categories}
+                />
+                <DropdownWrapper
+                    title='dropdown-menu'
                 ><RangeSlider /></DropdownWrapper>
             </div>
 
-            
+
             <Button disabled>Clear All</Button>
 
         </Box>

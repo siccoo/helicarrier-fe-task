@@ -16,7 +16,11 @@ function App() {
     "Vendor"
   ]
 
-  // const 
+  let categories = Array.from(new Set(transactions.map(transaction => transaction.category)));
+  let names = Array.from(new Set(transactions.map(transaction => transaction.transaction_name)));
+  let vendors = Array.from(new Set(transactions.map(transaction => transaction.transaction_vendor)));
+  let amountRange = [0, 1000];
+
   return (
     <div>
       {/* Helicarrier Simple Transaction Task */}
@@ -37,7 +41,11 @@ function App() {
       >
         Helicarrier Transaction Task
         <SearchBar />
-        <Filters />
+        <Filters
+          categories={categories}
+          names={names}
+          amountRange={amountRange}
+        />
       </Box>
       <DataTable columns={COLUMNS} data={transactions} />
     </div>
