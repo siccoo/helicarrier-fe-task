@@ -25,7 +25,7 @@ export const AutoCompleteCheckboxes: React.FC<AutoCompleteProps> = ({ options })
             disableCloseOnSelect
             getOptionLabel={(option) => option.title}
             renderOption={(props, option, { selected }) => (
-                <li {...props} key={key}>
+                <li {...props}>
                     <Checkbox
                         icon={icon}
                         checkedIcon={checkedIcon}

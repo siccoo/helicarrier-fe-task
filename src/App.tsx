@@ -2,11 +2,21 @@
 import './styles/App.css';
 import SearchBar from "./components/SearchBar";
 import { Filters } from './containers/Filters';
+import { DataTable } from './components/DataTable';
+import { transactions } from './data/mock_transactions';
 
 import Box, { BoxProps } from '@mui/material/Box';
 import { purple } from '@mui/material/colors';
 
 function App() {
+  const COLUMNS = [
+    "Transaction Name",
+    "Amount",
+    "Category",
+    "Vendor"
+  ]
+
+  const 
   return (
     <div>
       {/* Helicarrier Simple Transaction Task */}
