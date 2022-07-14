@@ -1,5 +1,6 @@
 import Box, { BoxProps } from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import MultiSelectChip from '../components/MultiSelect';
 
 export const Filters = () => {
 return(
@@ -13,7 +14,7 @@ return(
         borderWidth: "1px"
     }}
     >
-        filters here
+        <MultiSelectChip />
         <Button disabled></Button>
 
     </Box>
