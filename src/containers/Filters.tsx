@@ -9,21 +9,26 @@ import "../styles/filters.css"
 export const Filters = ({
     categories,
     names,
-    amountRange
+    amountRange,
+    vendorNames
 }: {
     categories: Array<string>,
     names: Array<string>,
     amountRange: Array<number>,
+    vendorNames: Array<string>
 }) => {
     return (
         <Box
             sx={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                width: '600px',
+                width: '780px',
                 backgroundColor: 'white',
                 borderColor: 'rgba(0, 0, 0, 1)',
-                borderWidth: "1px"
+                borderWidth: "1px",
+                paddingTop: '15px',
+                borderBottomRightRadius: '4px',
+                borderBottomLeftRadius: '4px'
             }}
         >
             <div className='filtersContainer'>

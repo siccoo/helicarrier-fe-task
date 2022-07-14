@@ -45,6 +45,7 @@ function App() {
           categories={categories}
           names={names}
           amountRange={amountRange}
+          vendorNames={vendors}
         />
       </Box>
       <DataTable columns={COLUMNS} data={transactions} />
