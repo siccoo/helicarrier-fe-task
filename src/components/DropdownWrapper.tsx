@@ -24,7 +24,7 @@ const StyledMenu = styled((props: MenuProps) => (
         color: "rgba(0,0,0,0.6)",
         boxShadow: "rgba(255, 255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.5) 0px 0px 0px 1px,",
         "& .MuiMenu-list": {
-            padding: "4px 0"
+            padding: "4px 5px"
         },
         "& .MuiMenuItem-root": {
             "& .MuiSvgIcon-root": {
