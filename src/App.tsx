@@ -7,6 +7,7 @@ import { transactions } from './data/mock_transactions';
 
 import Box, { BoxProps } from '@mui/material/Box';
 import { purple } from '@mui/material/colors';
+import { AutoCompleteCheckboxes } from './components/AutoCompleteCheckboxes';
 
 function App() {
   const COLUMNS = [
@@ -47,6 +48,7 @@ function App() {
           amountRange={amountRange}
           vendorNames={vendors}
         />
+        <AutoCompleteCheckboxes options={vendors} />
       </Box>
       <DataTable columns={COLUMNS} data={transactions} />
     </div>

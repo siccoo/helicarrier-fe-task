@@ -9,7 +9,7 @@ const icon = <CheckBoxOutlineBlankIcon fontSize="small" />
 const checkedIcon = <CheckBoxIcon fontSize="small" />
 
 interface AutoCompleteProps {
-    options: Array<Option>
+    options: Array<string>
 }
 
 interface Option {
@@ -23,7 +23,7 @@ export const AutoCompleteCheckboxes: React.FC<AutoCompleteProps> = ({ options })
             id="checkboxes-tags-demo"
             options={options}
             disableCloseOnSelect
-            getOptionLabel={(option) => option.title}
+            // getOptionLabel={option}
             renderOption={(props, option, { selected }) => (
                 <li {...props}>
                     <Checkbox
@@ -33,10 +33,10 @@ export const AutoCompleteCheckboxes: React.FC<AutoCompleteProps> = ({ options })
                         style={{ marginRight: 8 }}
                         checked={selected}
                     />
-                    {option.title}
+                    {option}
                 </li>
             )}
-            style={{ width: 500 }}
+            style={{ width: 150, margin: '8px' }}
             renderInput={(params) => (
                 <TextField {...params} label="Checkboxes" placeholder="Search Options" />
             )}
