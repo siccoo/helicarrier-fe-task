@@ -1,5 +1,16 @@
 import { Box, Chip, FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent } from '@mui/material';
-import * as React from 'react';
+import {useState} from 'react';
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+    PaperProps: {
+        style: {
+            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+            width: 250,
+        },
+    },
+};
 
 const names = [
     'Filter Option 1',
@@ -9,7 +20,7 @@ const names = [
 ]
 
 export default function MultiSelectChip() {
-    const [filterName, setFilterName] = React.useState<string[]>([]);
+    const [filterName, setFilterName] = useState<string[]>([]);
 
     const handleChange = (event: SelectChangeEvent<typeof filterName>) => {
         const { target: { value } } = event;
@@ -25,6 +36,7 @@ export default function MultiSelectChip() {
                 labelId='demo-label'
                 id='demo-multi-select'
                 multiple
+                autoWidth
                 value={filterName}
                 onChange={handleChange}
                 input={<OutlinedInput id='select-multiple' label="chip" />}
@@ -37,6 +49,7 @@ export default function MultiSelectChip() {
                         ))}
                     </Box>
                 )}
+                MenuProps={MenuProps}
             >
                 {names.map((name) => (
                     <MenuItem
